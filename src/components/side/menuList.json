@@ -1,0 +1,65 @@
+[
+    {
+        "resourceId": "1",
+        "icon": true,
+        "resourceName": "一级菜单1",
+        "children": [
+            {
+                "resourceId": "12",
+                "resourceName": "二级菜单1",
+                "children": [
+                    {
+                        "resourceId": "122",
+                        "resourceName": "三级菜单",
+                        "children": [
+                            {
+                                "resourceId": "1222",
+                                "resourceName": "四级级菜单1",
+                                "children": [
+                                    {
+                                        "resourceId": "12221",
+                                        "resourceName": "五级级菜单1",
+                                        "children": []
+                                    },
+                                    {
+                                        "resourceId": "12222",
+                                        "resourceName": "五级级菜单2",
+                                        "children": []
+                                    },
+                                    {
+                                        "resourceId": "12223",
+                                        "resourceName": "五级级菜单3",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "resourceId": "13",
+                "resourceName": "二级菜单2",
+                "children": []
+            }
+        ]
+    },
+    {
+        "resourceId": "2",
+        "icon": true,
+        "resourceName": "一级菜单2",
+        "children": [
+            {
+                "resourceId": "12",
+                "resourceName": "二级菜单1",
+                "children": []
+            }
+        ]
+    },
+    {
+        "resourceId": "3",
+        "icon": true,
+        "resourceName": "一级菜单3",
+        "children": []
+    }
+]
