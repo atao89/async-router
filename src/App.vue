@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <div ref="left" class="side">
+    <div
+      ref="left"
+      :class="[{ isMobile: $store.state.app.device === 'mobile' }, 'side']"
+      v-if="$store.state.app.device === 'desktop'"
+    >
       <div class="logo">Logo</div>
       <div class="menu">
         <Menu />
@@ -9,7 +13,7 @@
     <!-- <div ref="line" class="resize-line"></div> -->
     <div ref="right" class="content">
       <Header />
-      <!-- <Breadcrumb /> -->
+      <Breadcrumb />
       <Nav />
       <router-view />
     </div>
@@ -17,16 +21,35 @@
 </template>
 
 <script>
+import enquireScreen from "@/utils/device";
 import Menu from "./components/side/index.vue";
 import Header from "./components/header/index.vue";
-// import Breadcrumb from "./components/breadcrumb/index.vue";
+import Breadcrumb from "./components/breadcrumb/index.vue";
 import Nav from "./components/nav/index.vue";
 export default {
   components: {
     Menu,
     Header,
-    // Breadcrumb,
+    Breadcrumb,
     Nav,
+  },
+  created() {
+    let that = this;
+    enquireScreen((deviceType) => {
+      // tablet
+      if (deviceType === 0) {
+        sessionStorage.setItem("DEVICE", "mobile");
+        that.$store.commit("app/SET_DEVICE", "mobile");
+      }
+      // mobile
+      else if (deviceType === 1) {
+        sessionStorage.setItem("DEVICE", "mobile");
+        that.$store.commit("app/SET_DEVICE", "mobile");
+      } else {
+        sessionStorage.setItem("DEVICE", "desktop");
+        that.$store.commit("app/SET_DEVICE", "desktop");
+      }
+    });
   },
   methods: {
     drapContent() {

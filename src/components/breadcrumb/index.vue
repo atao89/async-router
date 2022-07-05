@@ -16,6 +16,5 @@ export default {
   height: 40px;
   display: flex;
   align-items: center;
-  background: #ddd;
 }
 </style>

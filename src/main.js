@@ -5,11 +5,16 @@ import store from "./store";
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import { isPhone } from "@/utils/validate"
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
+  mounted() {
+    sessionStorage.setItem('DEVICE', isPhone())
+    store.commit('app/SET_DEVICE', isPhone())
+  },
   render: (h) => h(App),
 }).$mount("#app");

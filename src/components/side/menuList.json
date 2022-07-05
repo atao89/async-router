@@ -61,5 +61,35 @@
         "icon": true,
         "resourceName": "一级菜单3",
         "children": []
+    },
+    {
+        "resourceId": "4",
+        "icon": true,
+        "resourceName": "一级菜单4",
+        "children": []
+    },
+    {
+        "resourceId": "5",
+        "icon": true,
+        "resourceName": "一级菜单5",
+        "children": []
+    },
+    {
+        "resourceId": "6",
+        "icon": true,
+        "resourceName": "一级菜单6",
+        "children": []
+    },
+    {
+        "resourceId": "7",
+        "icon": true,
+        "resourceName": "一级菜单7",
+        "children": []
+    },
+    {
+        "resourceId": "8",
+        "icon": true,
+        "resourceName": "一级菜单8",
+        "children": []
     }
 ]

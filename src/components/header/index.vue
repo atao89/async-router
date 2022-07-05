@@ -4,19 +4,26 @@
       :class="[isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold']"
       @click="changeHandle"
     ></i>
+    {{ device }}
   </div>
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import {
+  mapState,
+  // mapGetters,
+  mapMutations,
+} from "vuex";
 export default {
   data() {
     return {};
   },
   computed: {
     ...mapState("setting", ["isCollapse"]),
+    ...mapState("app", ["device"]),
   },
   methods: {
+    // ...mapGetters(["device"]),
     ...mapMutations("setting", ["changeCollapse"]),
     changeHandle() {
       this.changeCollapse();
